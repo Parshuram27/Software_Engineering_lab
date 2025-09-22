@@ -4,14 +4,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>in.kmit</group1d>
+  <groupId>in.kmit</groupId>
   <artifactId>EduAssessPro</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>EduAssessPro Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>http://www.EduAssessPro.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,9 +23,35 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
+      <version>4.13.2</version> 
       <scope>test</scope>
     </dependency>
-  </dependencies>
+    <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.33</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/com.typesafe.scala-logging/scala-logging -->
+	<dependency>
+	    <groupId>com.typesafe.scala-logging</groupId>
+	    <artifactId>scala-logging_3</artifactId>
+	    <version>3.9.5</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+	<dependency>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-site-plugin</artifactId>
+	    <version>3.12.1</version>
+	</dependency>
+	  </dependencies>
 
   <build>
     <finalName>EduAssessPro</finalName>
@@ -35,7 +61,6 @@
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
-        <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
           <version>3.3.1</version>
@@ -49,6 +74,7 @@
           <version>3.3.0</version>
         </plugin>
         <plugin>
+        
           <artifactId>maven-war-plugin</artifactId>
           <version>3.4.0</version>
         </plugin>
@@ -60,7 +86,7 @@
           <artifactId>maven-deploy-plugin</artifactId>
           <version>3.1.2</version>
         </plugin>
-      </plugin>
+      </plugins>
     </pluginManagement>
   </build>
 </project>
